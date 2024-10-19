@@ -1,0 +1,69 @@
+NYPD Crime Data Prediction System
+Overview
+This project is a machine learning-based prediction system that analyzes 85,000+ NYPD crime records (2020-2023). It predicts suspects' age group, race, and sex using logistic regression models with softmax regression. The project cleans and processes 35+ columns of data and extracts temporal features to enhance predictive accuracy.
+
+Features
+Predictive modeling: Predicts suspect’s age group, race, and sex using softmax regression with logistic regression.
+Comprehensive data preprocessing: Cleans and encodes 35+ columns, managing missing values and reorganizing data.
+Balanced class weights: Improves predictions for underrepresented groups.
+Feature extraction: Creates temporal features such as year, month, day, and weekday for better predictions.
+Web integration potential: Future versions could incorporate results into a web-based interface using HTML, CSS, and JavaScript.
+Technologies Used
+Languages: Python, HTML, CSS, JavaScript
+Libraries: pandas, numpy, scikit-learn
+Tools: Jupyter Notebook, Conda environments
+Operating Systems: Windows, MacOS, Linux, WSL
+Setup & Installation
+Clone the repository:
+
+
+git clone <repository-url>
+cd NYPD_Crime_Prediction
+Set up a virtual environment:
+
+conda create -n crime-prediction python=3.8
+conda activate crime-prediction
+Install the required libraries:
+
+
+pip install pandas numpy scikit-learn
+Prepare the dataset:
+
+
+# Example: Predict suspect's age group
+predicted_age_group = model.predict(X_test_age)
+print(f"Predicted Age Group: {predicted_age_group}")
+Dataset Overview
+The dataset contains 85,000+ crime records (2020-2023) with the following columns:
+
+Crime Details: Type of offense, law category, precinct, location type
+Suspect & Victim Details: Age group, race, sex
+Temporal Features: Year, month, day, hour, weekday
+Geospatial Data: Latitude, longitude
+Environment Details: Parks, housing developments, transit stations
+Prediction Logic
+Data Preprocessing:
+
+Drops unnecessary columns and handles missing values.
+Encodes categorical variables using one-hot encoding for compatibility with machine learning models.
+Extracts time-based features from date and time columns.
+Model Training:
+
+Uses softmax regression via logistic regression to train models for age group, race, and sex prediction.
+Balances class weights to improve accuracy for underrepresented groups.
+Prediction:
+
+Takes in crime details and outputs predictions for the suspect’s age group, race, and sex.
+Future Enhancements
+Web-based visualization: Integrate the system with a web interface using HTML, CSS, and JavaScript.
+Geospatial analysis: Add heatmaps or clustering for crime hotspots based on latitude and longitude.
+Interactive dashboards: Use tools like Plotly or Dash for real-time analytics and visualization.
+Contributing
+Contributions are welcome! Fork the repository and submit a pull request for any improvements or new features.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+Acknowledgements
+Thanks to the NYPD Open Data Portal for providing the dataset and enabling this project.
+
